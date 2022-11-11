@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/kej_signup_v2.css">
+    <script src="javascript/prefixfree.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header start -->
+        <header class="header">
+            <div class="top_menu_wrap">
+                <div class="flexbox">
+                    <a href="kej_signup_v2.html" class="hd_logo"><img src="../resources/images/kej/ej_logo.png" alt="EJ TRAVEL TRIP"></a>
+                    <div class="tr">
+                        <ul class="tnp">
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="kej_signup_v2.html">회원가입</a></li>
+                            <li><a href="#">예약확인/결제</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                        <div class="util">
+                            <a href="#" class="search"><img src="../resources/images/kej/ico-hd-sch.png" alt="검색"></a>
+                            <a href="#" class="allmenu"><img src="../resources/images/kej/allmenu.png" alt="전체메뉴"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="local_menu_wrap">
+                <div class="flexbox">
+                    <ul class="gnb">
+                        <li><a href="#"><span>해외여행</span></a></li>
+                        <li><a href="#">제주/국내여행</a></li>
+                        <li><a href="#">테마여행</a></li>
+                        <li><a href="#">자유여행</a></li>
+                        <li><a href="#">항공</a></li>
+                        <li><a href="#">호텔</a></li>
+                        <li><a href="#">현지투어/입장권</a></li>
+                        <li><a href="#">렌터카</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+        <!-- content start -->
+        <main class="content">
+            <!-- page title start -->
+            <div class="sub_tit">
+                <div class="flexbox">
+                    <h2 class="tit">회원가입</h2>
+                </div>
+            </div>
+            <div class="location">
+                <div class="flexbox">
+                    <ul>
+                        <li class="home"><a href="kej_signup_v2.html">홈</a></li>
+                        <li>회원가입</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- page title end -->
+            <!-- join start -->
+            <div class="content_body">
+                <div class="join_step">
+                    <div class="flexbox">
+                        <h3 class="tit">회원 정보 입력</h3>
+                        <ol class="step">
+                            <li>
+                                <span class="icon"><img src="../resources/images/kej/step1.png"></span>
+                                <div><span>step 1</span>본인 인증</div>
+                            </li>
+                            <li class="on">
+                                <span class="icon"><img src="../resources/images/kej/step2.png"></span>
+                                <div><span>step 2</span>회원 정보 입력</div>
+                            </li>
+                            <li>
+                                <span class="icon"><img src="../resources/images/kej/step3.png"></span>
+                                <div><span>step 3</span>가입 완료</div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="joinform">
+                    <div class="flexbox">
+                        <form action="#">
+                            <fieldset>
+                                <legend class="hidden">회원 정보 입력</legend>
+                                <div class="form_content">
+                                    <div class="title">
+                                        <h4>기본회원정보</h4>
+                                        <p><span class="required">*</span> 표시는 필수 입력항목입니다.</p>
+                                    </div>
+                                    <div class="info_cont">
+                                        <div class="row">
+                                            <div class="label_area">
+                                                <label for="mem_nm" class="label_tit">이름 <span class="required">*</span></label>
+                                            </div>
+                                            <div class="input_area">
+                                                <input type="text" placeholder="이름을 입력해주세요" id="mem_nm" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="label_area">
+                                                <label for="mem_id" class="label_tit">아이디 <span class="required">*</span></label>
+                                            </div>
+                                            <div class="input_area">
+                                                <input type="text" placeholder="아이디를 입력해주세요" id="mem_id" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="label_area">
+                                                <label for="mem_pwd" class="label_tit">비밀번호 <span class="required">*</span></label>
+                                            </div>
+                                            <div class="input_area">
+                                                <input type="password" placeholder="비밀번호를 입력해주세요" id="mem_pwd" required>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="label_area">
+                                                <label for="mem_pwd_confirm" class="label_tit">비밀번호확인 <span class="required">*</span></label>  
+                                            </div>                                  
+                                            <div class="input_area">
+                                                <input type="password" placeholder="비밀번호를 다시 입력해주세요" id="mem_pwd_confirm" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form_content">
+                                    <div class="title">
+                                        <h4>부가입력사항</h4>
+                                        <p>선택 입력항목입니다.</p>
+                                    </div>
+                                    <div class="info_cont">
+                                        <div class="row">
+                                            <div class="label_area">
+                                                <label for="brith" class="label_tit">생년월일</label>
+                                            </div>
+                                            <div class="input_area">
+                                                <div class="col2">
+                                                    <input type="date" id="brith" data-placeholder="날짜 선택">
+                                                </div>
+                                                <div class="col2 rdo_list">
+                                                    <span><input type="radio" name="brith_sm" id="brith_s"><label for="brith_s">양력</label></span>
+                                                    <span><input type="radio" name="brith_sm" id="brith_m"><label for="brith_m">음력</label></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">                                            
+                                            <div class="label_area">
+                                                <p for="gender" class="label_tit">성별</p>
+                                            </div>
+                                            <div class="input_area rdo_list">
+                                                <span><input type="radio" name="gender" id="gender_f"><label for="gender_f">여자</label></span>
+                                                <span><input type="radio" name="gender" id="gender_m"><label for="gender_m">남자</label></span>
+                                                <span><input type="radio" name="gender" id="gender_e"><label for="gender_e">기타</label></span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="label_area">
+                                                <label for="email" class="label_tit">이메일</label>
+                                            </div>
+                                            <div class="input_area">
+                                                <input type="email" placeholder="이메일을 입력해주세요" id="email" autocomplete="on">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="label_area">
+                                                <label for="mobile" class="label_tit">휴대폰번호</label>
+                                            </div>
+                                            <div class="input_area mobile">
+                                                <div class="mobile1 select_area">
+                                                    <select name="" id="mobile">
+                                                        <option value="010">010</option>
+                                                        <option value="011">011</option>
+                                                        <option value="016">016</option>
+                                                        <option value="017">017</option>
+                                                        <option value="018">018</option>
+                                                        <option value="019">019</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mobile2">
+                                                    <input type="tel" placeholder="하이픈(-)을 포함하여 입력해주세요" id="mobile1" pattern="[0-9]{4}-[0-9]{4}" title="0000-0000">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="label_area">
+                                                <p class="label_tit">주소</p> 
+                                            </div>
+                                            <div class="input_area add">
+                                                <div class="add_row">
+                                                    <div class="add1">
+                                                        <input type="text" id="sample6_postcode" placeholder="우편번호">
+                                                    </div>
+                                                    <div class="add2">
+                                                        <button type="button" onclick="sample6_execDaumPostcode()">우편번호찾기</button>
+                                                    </div>
+                                                </div>
+                                                <div class="add_row">
+                                                    <input type="text" id="sample6_address" placeholder="주소">
+                                                </div>
+                                                <div class="add_row">
+                                                    <input type="text" id="sample6_detailAddress" placeholder="상세주소를 입력하세요">
+                                                    <input type="text" id="sample6_extraAddress" placeholder="참고항목" hidden>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="label_area">
+                                                <label for="purpose" class="label_tit">가입목적</label>
+                                            </div>
+                                            <div class="input_area txtarea">
+                                                <textarea name="" id="purpose" cols="30" rows="10" placeholder="가입목적을 입력해주세요"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="label_area">
+                                                <p for="color" class="label_tit">좋아하는 색깔</p>
+                                            </div>
+                                            <div class="input_area">
+                                                <input type="color" id="color" value="#FFDA57">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="label_area">
+                                                <label for="sns" class="label_tit">SNS 주소</label>
+                                            </div>
+                                            <div class="input_area">
+                                                <input type="url" placeholder="SNS URL을 입력해주세요" id="sns">
+                                            </div>
+                                        </div>
+                                        <div class="row full">
+                                            <div class="label_area">
+                                                <p class="label_tit">가고 싶은 여행지</p>
+                                            </div>
+                                            <div class="input_area rdo_list">
+                                                <span><input type="checkbox" name="" id="issue1"><label for="issue1">아시아</label></span>
+                                                <span><input type="checkbox" name="" id="issue2"><label for="issue2">유럽</label></span>
+                                                <span><input type="checkbox" name="" id="issue3"><label for="issue3">북미</label></span>
+                                                <span><input type="checkbox" name="" id="issue4"><label for="issue4">오세아니아</label></span>
+                                                <span><input type="checkbox" name="" id="issue5"><label for="issue5">중남미</label></span>
+                                                <span><input type="checkbox" name="" id="issue6"><label for="issue6">중동/아프리카</label></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="btn_cont">
+                                <button type="submit">회원가입</button><button type="reset">취소</button>
+                            </div>
+                        </form>
+                    </div>
+                    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+                    <script>
+                        function sample6_execDaumPostcode() {
+                            new daum.Postcode({
+                                oncomplete: function(data) {
+                                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                                    // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                                    var addr = ''; // 주소 변수
+                                    var extraAddr = ''; // 참고항목 변수
+
+                                    //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                                    if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                                        addr = data.roadAddress;
+                                    } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                                        addr = data.jibunAddress;
+                                    }
+
+                                    // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                                    if(data.userSelectedType === 'R'){
+                                        // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                                        // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                                        if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                                            extraAddr += data.bname;
+                                        }
+                                        // 건물명이 있고, 공동주택일 경우 추가한다.
+                                        if(data.buildingName !== '' && data.apartment === 'Y'){
+                                            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                                        }
+                                        // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                                        if(extraAddr !== ''){
+                                            extraAddr = ' (' + extraAddr + ')';
+                                        }
+                                        // 조합된 참고항목을 해당 필드에 넣는다.
+                                        document.getElementById("sample6_extraAddress").value = extraAddr;
+                                    
+                                    } else {
+                                        document.getElementById("sample6_extraAddress").value = '';
+                                    }
+
+                                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                                    document.getElementById('sample6_postcode').value = data.zonecode;
+                                    document.getElementById("sample6_address").value = addr;
+                                    // 커서를 상세주소 필드로 이동한다.
+                                    document.getElementById("sample6_detailAddress").focus();
+                                }
+                            }).open();
+                        }
+                    </script>
+                </div>
+            </div>
+            <!-- join end -->
+        </main>
+        <!-- content end -->
+        <!-- footer start -->
+        <footer class="footer">
+            <div class="fnb">
+                <div class="flexbox">
+                    <a href="#">회사소개</a>
+                    <a href="#">이용약관</a>
+                    <a href="#"><strong>개인정보보호정책</strong></a>
+                    <a href="#">여행약관</a>
+                    <a href="#">여행자보험</a>
+                    <a href="#">마케팅제휴문의</a>
+                    <a href="#">온라인제휴문의</a>
+                    <a href="#">여행플래너</a>
+                    <a href="#">대리점개설문의</a>
+                </div>
+            </div>
+            <div class="footer_body">
+                <div class="flexbox">
+                    <a href="kej_signup_v2.html" class="ft_logo"><img src="../resources/images/kej/ft_ej_logo.png" alt="EJ TRAVEL TRIP"></a>
+                    <div class="info_cont">
+                        <div class="licnese_area">
+                            <span>EJ TRAVEL TRIP</span>
+                            <span>주소 : 우)01234 서울특별시 가나구 다라마로 1길 234호</span>
+                        </div>
+                        <div class="licnese_area">
+                            <span>TEL : 02-123-4567~8</span>
+                            <span>FAX : 02-123-4569</span>
+                            <span>E-MAIL : ejtraveltrip@ejtraveltrip.com</span>
+                        </div>
+                        <div class="copy_area">
+                            <p>※ 부득이한 사정에 의해 여행일정이 변경되는 경우 사전 동의를 받습니다.</p>
+                            <p>※ 개별 항공권, 단품 및 일부 여행상품에 대하여 통신판매중개자로서 통신판매의 당사자가 아니며 해당상품의 거래정보 및 거래등에 대해 책임을 지지 않습니다.</p>
+                            <p>Copyright &copy; 2022 EJ TRAVEL TRIP. All Rights Reserved.</p>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+    </div>
+</body>
+</html>
