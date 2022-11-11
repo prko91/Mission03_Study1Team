@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Poppins:wght@700&display=swap');
+
+*{margin:0; padding:0; box-sizing:border-box;}
+p, h3{font-family:'Nanum Gothic'; font-size:14px; font-weight:700}
+.hidden {position:absolute; width:1px; height:1px; overflow:hidden; margin:-1px; border:0;}
+
+body{display:flex; justify-content:center; align-items:center; min-height:100vh;}
+.wrap {position:relative; width:1200px; height:550px}
+
+header{float:left; margin-top:20px;}
+header h1{font-family:'Poppins', 'Nanum Gothic'; font-size:48px; line-height:58px; font-weight:800; padding-bottom:20px}
+header h1 span{display:block; color:#3BECB8; font-size:20px; margin-bottom:10px;}
+
+.flexbox {display:flex; flex-direction:column; position:relative; padding-right:65px;} 
+.flexbox::before{content:""; position:absolute; top:0; right:0; width:1020px; height:474px; background:#F9FEFD url(../resources/kej/index/bg.png) no-repeat right top; border-radius:130px; z-index:-999}
+.discript{height:187px; padding:92px 0 0 70px; line-height:24px;}
+.flexbox > article {display:flex}
+.flexbox > article > section {position:relative; width:178px; height:328px; border-radius:70px; padding:35px 0 0 30px}
+.flexbox > article > section > img {width:58px; height:58px}
+.flexbox > article > section > h3 {margin:26px 0 10px 0;}
+.flexbox > article > section > p {font-size:12px; font-weight:400; line-height:20px}
+@keyframes boxon {
+    from{background:rgba(59, 236, 184,0); box-shadow:0px 0px 60px rgba(59, 236, 184, 0);} to{background:#fff; box-shadow:0px 0px 60px rgba(59, 236, 184, 0.15);}
+}
+.flexbox > article > section:hover{animation:boxon 0.3s; background:#fff; box-shadow:0px 0px 60px rgba(59, 236, 184, 0.15)}
+.flexbox > article > section > a {position:absolute; right:24px; bottom:40px; width:40px; height:40px; border-radius:20px; opacity:0;}
+.flexbox > article > section:hover > a{background:#3BECB8 url('../resources/kej/index/btn_arrow.svg') no-repeat center; opacity:0.5; transition:0.3s;}
+.flexbox > article > section:hover > a:hover{box-shadow:0px 3px 10px rgba(59, 236, 184, 0.5); opacity:1; transition:0.3s}
