@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>만월당</title>
+    <link rel="stylesheet" href="../css/jungenjin_faq.css" />
+    <link rel="shortcut ico" href="../resources/images/jungenjin/bread.ico" />
+    <link rel="icon" href="../resources/images/jungenjin/bread.ico" />
+    <script src="../javascript/jquery-3.3.1.min.js"></script>
+    <script>
+      $(document).ready(function(){
+         $('#m_QA  a.m1').click(function () {
+               //서브 메뉴(ul 요소)가 존재하는 a 요소(.m)를 click하면,
+               var test = $(this).next().addBack();
+               //    console.log(this); //a.m
+               //    console.log(test); //0 : a.m, 1 : ul
+               //find() : ul 요소의 하위 요소 중 .m, ul 요소를 선택합니다
+               test.toggleClass('on').end();
+               //    console.log(test.toggleClass('on').end()); //ul
+               test.find('.m1, ul').removeClass('on').end();
+               //    console.log(test.find('.m, ul').removeClass('on').end()); //0 : a.m.on , 1 : ul.on
+               test.parent().siblings();
+               //    console.log(test.parent().siblings()); // 0 : li , 1 : li
+               test.find('.m1, ul').removeClass('on');
+               //    console.log(test.find('.m, ul').removeClass('on')); // 0 : a.m , 1 : ul , 2 : a.m, 3 : ul, 4 : a.m , 5 : ul
+
+               return false;
+            });
+      });
+
+      $(document).ready(function(){
+         $('#m_QA  ul li a.m2').click(function () {
+               //서브 메뉴(ul 요소)가 존재하는 a 요소(.m)를 click하면,
+               var test = $(this).next().addBack();
+               //    console.log(this); //a.m
+               //    console.log(test); //0 : a.m, 1 : ul
+               //find() : ul 요소의 하위 요소 중 .m, ul 요소를 선택합니다
+               test.toggleClass('on').end();
+               //    console.log(test.toggleClass('on').end()); //ul
+               test.find('ul, .m3').removeClass('on').end();
+               //    console.log(test.find('.m, ul').removeClass('on').end()); //0 : a.m.on , 1 : ul.on
+               test.parent().siblings();
+               //    console.log(test.parent().siblings()); // 0 : li , 1 : li
+               test.find('ul, .m3').removeClass('on');
+               //    console.log(test.find('.m, ul').removeClass('on')); // 0 : a.m , 1 : ul , 2 : a.m, 3 : ul, 4 : a.m , 5 : ul
+
+               return false;
+            });
+      });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <header>
+            <div class="container">
+               <h1>
+                  <a href="jungenjin.html"
+                     ><img src="../resources/images/jungenjin/bread.ico" alt="만월당 로고"
+                  /></a>
+               </h1>
+               <nav>
+                  <ul>
+                     <li><a href="#">회사 소개</a></li>
+                     <li><a href="#">제품 안내</a></li>
+                     <li><a href="#">이벤트&멤버쉽</a></li>
+                     <li><a href="#">창업 안내</a></li>
+                  </ul>
+               </nav>
+               <nav_r>
+                  <ul>
+                     <li>
+                        <a href="#"
+                           ><div class="nav_icon">
+                              <img
+                                 src="../resources/images/jungenjin/people.svg"
+                                 alt="인재 채용" /></div
+                        ></a>
+                     </li>
+                     <li>
+                        <a href="#"
+                           ><div class="nav_icon">
+                              <img
+                                 src="../resources/images/jungenjin/login.svg"
+                                 alt="로그인" /></div
+                        ></a>
+                     </li>
+                  </ul>
+               </nav_r>
+            </div>
+         </header>
+         <!-- section -->
+         <section>
+            <div class="container">
+               <div class="QA_box">
+                  <p class="title">자주 묻는 질문</p>
+                  <ul id="m_QA">
+                     <li><a href="#" class="m1">구독 서비스 배송 관련 질문</a>
+                        <ul>
+                           <li><a href="#" class="m2">Q 배송은 얼마나 걸리나요?</a>
+                              <ul>
+                                 <p><a href="#" class="m3">A 일주일 정도 걸립니다</a></p>
+                              </ul>
+                           </li>
+                           <li><a href="#" class="m2">Q 누락이 된다면 어떻게 해야하나요?</a>
+                              <ul>
+                                 <p><a href="#" class="m3">A 고객센터로 문의 바랍니다.</a></p>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><a href="#" class="m1">이벤트 관련 질문</a>
+                        <ul>
+                           <li><a href="#" class="m2">Q 이벤트 당첨자는 언제 발표되나요?</a>
+                              <ul>
+                                 <p><a href="#" class="m3">A 일주일 정도 걸립니다</a></p>
+                              </ul>
+                           </li>
+                           <li><a href="#" class="m2">Q 다음 이벤트는 언제인가요?</a>
+                              <ul>
+                                 <p><a href="#" class="m3">A 확정된 것은 없으나 만월당 SNS에 이주일 전부터 공지하고 있습니다.</a></p>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><a href="#" class="m1">상생 문의 질문</a>
+                        <ul>
+                           <li><a href="#" class="m2">Q 상생 문의 확정은 언제 알 수 있나요?</a>
+                              <ul>
+                                 <p><a href="#" class="m3">A 일주일 정도 걸립니다</a></p>
+                              </ul>
+                           </li>
+                           <li><a href="#" class="m2">Q 제빵 관련 식재료만 상생 문의를 할 수 있나요?</a>
+                              <ul>
+                                 <p><a href="#" class="m3">A 어떤 방식으로든 협업이 가능하다면 문의 가능합니다.</a></p>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><a href="#" class="m1">채용관련 질문</a>
+                        <ul>
+                           <li><a href="#" class="m2">Q 합격자 발표는 언제 나오나요?</a>
+                              <ul>
+                                 <p><a href="#" class="m3">A 8월 22일 발표입니다.</a></p>
+                              </ul>
+                           </li>
+                           <li><a href="#" class="m2">Q 제빵기사의 합격자 발표는 언제인가요?</a>
+                              <ul>
+                                 <p><a href="#" class="m3">A 8월 30일 발표입니다.</a></p>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><a href="#" class="m1">가맹점 문의 질문</a>
+                        <ul>
+                           <li><a href="#" class="m2">Q 가맹점 문의 확정은 언제 되나요?</a>
+                              <ul>
+                                 <p><a href="#" class="m3">A 서류 제출 후 한달 정도 소요됩니다.</a></p>
+                              </ul>
+                           </li>
+                           <li><a href="#" class="m2">Q 직영점은 언제 확정이 되나요?</a>
+                              <ul>
+                                 <p><a href="#" class="m3">A 서류 제출 후 두달 정도 소요됩니다.</a></p>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+          <!-- footer -->
+          <footer>
+            <div class="container">
+                <div class="footer">
+                    <div class="part_4box1">
+                        <p class="text7">Contact Us</p>
+                        <p class="text8">1566-1599</p>
+                        <p class="text9">소비자를 생각하는, 지역을 생각하는 <br>
+                        상생과 정성을 실천하는 만월당</p>
+                    </div>
+                    <div class="part_4box2">
+                        <p class="text7">Featured News</p>
+                        <div class="boximg5"></div>
+                        <div class="text_box3">
+                            <p class="text10">만월당 1호점 오픈</p>
+                            <p class="text9">이번 13일, 만월당이 일본에 1호점을 오픈했다.<br>
+                                한국을 넘어 해외로 진출한 만월당의 성장이 기대된다.</p>
+                        </div>
+                    </div>
+                    <div class="part_4box3">
+                        <p class="text7">SNS</p>
+                        <div class="iconbox1"></div>
+                        <div class="iconbox2"></div>
+                        <div class="iconbox3"></div>
+                    </div>
+                </div>
+        </footer>
+    </div>
+</body>
+</html>

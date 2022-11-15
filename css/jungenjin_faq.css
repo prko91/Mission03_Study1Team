@@ -1,0 +1,224 @@
+@charset "utf-8";
+/* 초기화 */
+* {
+   margin: 0;
+   padding: 0;
+}
+a {
+   text-decoration: none;
+}
+ul,
+li,
+ol {
+   list-style: none;
+}
+/* common */
+.container {
+   margin: 0 auto;
+   max-width: 1200px;
+   overflow: hidden;
+   font-family: 'Noto Sans KR', sans-serif;
+}
+/* header */
+header {
+   width: 100%;
+   height: 80px;
+   margin: 14px 0 0 0;
+   box-sizing: border-box;
+}
+h1 img {
+   width: 66px;
+}
+h1 {
+   float: left;
+   margin: 0 75px 0 0;
+}
+nav {
+   float: left;
+   overflow: hidden;
+}
+nav ul li {
+   float: left;
+   margin: 16px 58px 0 0;
+   font-size: 18px;
+   font-weight: 300;
+}
+nav ul li a {
+   color: #292929;
+}
+nav_r {
+   float: right;
+   overflow: hidden;
+}
+nav_r ul li {
+   float: right;
+   margin: 20px 0 0 0;
+   font-size: 18px;
+   font-weight: 300;
+}
+nav_r ul li img {
+   width: 24px;
+   height: 24px;
+   background-position: center;
+   background-size: cover;
+}
+.nav_icon {
+   float: right;
+   width: 40px;
+   height: 40px;
+}
+/* nav hover */
+nav ul li a:hover {
+   color: #ff7b00;
+}
+/* section */
+.title {
+   text-align: center;
+   font-size: 38px;
+   font-weight: bold;
+   margin: 100px 0 100px 0;
+   color: #161a1d;
+}
+.QA_box {
+   width: 1200px;
+   height: 696px;
+}
+li {
+   list-style: none;
+}
+a {
+   color: #161a1d;
+   text-decoration: none;
+}
+#m_QA {
+   position: absolute;
+   width: 1200px;
+   height: 320px;
+}
+#m_QA a {
+   display: block;
+   padding: 20px;
+}
+#m_QA a.m1 {
+   border-bottom: 1px solid #3a3a3a;
+}
+#m_QA .m1 {
+   font-weight: bold;
+}
+
+#m_QA .m1.on {
+   color: #ff7b00;
+}
+
+#m_QA > li> ul > a.m3 {
+   display: none;
+   display: block;
+   padding: 20px;
+}
+#m_QA ul a.m3 {
+   background: #fce9cd;
+}
+#m_QA ul a {
+   text-indent: 20px;
+}
+#m_QA li ul {
+   display: none;
+
+}
+#m_QA li ul.on {
+   display: block;
+}
+
+/* footer */
+footer {
+   clear: both;
+   width: 100%;
+   min-height: 246px;
+   background-color: #495057;
+   clear: both;
+   margin: 100px 0 0 0;
+}
+.text7 {
+   font-size: 20px;
+   font-weight: 100;
+   color: #f8f9fa;
+}
+.part_4box1 {
+   float: left;
+   width: 277px;
+   height: 155px;
+   margin: 27px 0 0 0;
+}
+.text8 {
+   font-size: 36px;
+   font-weight: 800;
+   color: #161a1d;
+}
+.text9 {
+   font-size: 12px;
+   font-weight: 300;
+   color: #adb5bd;
+}
+.part_4box2 {
+   float: left;
+   width: 585px;
+   height: 155px;
+   margin: 27px 0 0 30px;
+}
+.boximg5 {
+   float: left;
+   width: 175px;
+   height: 114px;
+   background-image: url(../resources/images/jungenjin/bakery3.jpg);
+   background-position: center;
+   margin: 9px 0 0 0;
+}
+.text_box3 {
+   float: left;
+   width: 380px;
+   height: 114px;
+   margin: 9px 0 0 30px;
+}
+.text10 {
+   font-size: 14px;
+   font-weight: bold;
+   color: #dee2e6;
+}
+.part_4box3 {
+   float: left;
+   width: 277px;
+   height: 155px;
+   margin: 27px 0 0 30px;
+}
+.iconbox1 {
+   float: left;
+   width: 24px;
+   height: 24px;
+   background-image: url(../resources/images/jungenjin/youtube_icon.svg);
+   background-position: center;
+   background-size: cover;
+   box-sizing: border-box;
+   filter: invert(7%) sepia(7%) saturate(1352%) hue-rotate(163deg) brightness(95%) contrast(93%);
+}
+.iconbox2 {
+   float: left;
+   width: 24px;
+   height: 24px;
+   margin: 0 0 0 15px;
+   background-image: url(../resources/images/jungenjin/twitter_icon.svg);
+   background-position: center;
+   background-size: cover;
+   box-sizing: border-box;
+   filter: invert(7%) sepia(7%) saturate(1352%) hue-rotate(163deg) brightness(95%) contrast(93%);
+}
+.iconbox3 {
+   float: left;
+   width: 24px;
+   height: 24px;
+   margin: 0 0 0 15px;
+   background-image: url(../resources/images/jungenjin/instagram_icon.svg);
+   background-position: center;
+   background-size: cover;
+   box-sizing: border-box;
+   filter: invert(7%) sepia(7%) saturate(1352%) hue-rotate(163deg) brightness(95%) contrast(93%);
+}
