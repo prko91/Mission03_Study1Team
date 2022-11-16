@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
-    <link rel="stylesheet" href="../css/kej_signup_v2.css">
-    <script src="javascript/prefixfree.min.js"></script>
+    <title>자주하는 질문</title>
+    <link rel="stylesheet" href="../css/kej_faq.css">
+    <script src="../javascript/prefixfree.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        //tab - jQuery로 구현
+        $(document).ready(function(){
+            $(".faq_tab > li").click(function(){
+                if($(this).hasClass("on") == false){
+                    $(this).stop().addClass("on");
+                    $(this).stop().siblings().removeClass("on");
+                } 
+            })
+        })
+        //list - javascript로 구현
+        window.onload = function(){
+            var question = document.getElementsByClassName('question');
+            // console.log(question.length)
+            for(var i = 0; i < question.length; i++){
+                question[i].addEventListener('click', function(e){
+                    var answer = e.currentTarget.parentElement.getElementsByClassName('answer')[0];
+                    // console.log('answer :: ', answer)
+                    // console.log('answer.style.display :: ', answer.style.display)
+                    // console.log('e.currentTarget.parentElement :: ', e.currentTarget.parentElement)
+                    // console.log('answer.style.visibility :: ', answer.style.visibility
+                    if(answer.style.visibility !== 'visible'){
+                        answer.style.visibility = 'visible'
+                        e.currentTarget.parentElement.classList.add('active');
+                    } else if(answer.style.visibility !== 'hidden'){
+                        answer.style.visibility = 'hidden'
+                        e.currentTarget.parentElement.classList.remove('active');
+                    }
+                })
+            }   
+        }
+</script>
 </head>
 <body>
     <div class="wrap">
@@ -14,17 +47,17 @@
         <header class="header">
             <div class="top_menu_wrap">
                 <div class="flexbox">
-                    <a href="kej_signup_v2.html" class="hd_logo"><img src="../resources/images/kej/ej_logo.png" alt="EJ TRAVEL TRIP"></a>
+                    <a href="kej_faq.html" class="hd_logo"><img src="../resources/kej/ej_logo.png" alt="EJ TRAVEL TRIP"></a>
                     <div class="tr">
                         <ul class="tnp">
                             <li><a href="#">로그인</a></li>
-                            <li><a href="kej_signup_v2.html">회원가입</a></li>
+                            <li><a href="#">회원가입</a></li>
                             <li><a href="#">예약확인/결제</a></li>
-                            <li><a href="#">고객센터</a></li>
+                            <li><a href="kej_faq.html">고객센터</a></li>
                         </ul>
                         <div class="util">
-                            <a href="#" class="search"><img src="../resources/images/kej/ico-hd-sch.png" alt="검색"></a>
-                            <a href="#" class="allmenu"><img src="../resources/images/kej/allmenu.png" alt="전체메뉴"></a>
+                            <a href="#" class="search"><img src="../resources/kej/ico-hd-sch.png" alt="검색"></a>
+                            <a href="#" class="allmenu"><img src="../resources/kej/allmenu.png" alt="전체메뉴"></a>
                         </div>
                     </div>
                 </div>
@@ -50,262 +83,226 @@
             <!-- page title start -->
             <div class="sub_tit">
                 <div class="flexbox">
-                    <h2 class="tit">회원가입</h2>
+                    <h2 class="tit">자주하는 질문</h2>
                 </div>
             </div>
             <div class="location">
                 <div class="flexbox">
                     <ul>
-                        <li class="home"><a href="kej_signup_v2.html">홈</a></li>
-                        <li>회원가입</li>
+                        <li class="home"><a href="kej_faq.html">홈</a></li>
+                        <li>고객센터</li>
+                        <li>자주하는 질문</li>
                     </ul>
                 </div>
             </div>
             <!-- page title end -->
-            <!-- join start -->
+            <!-- faq list start -->
             <div class="content_body">
-                <div class="join_step">
+                <div class="faq">
                     <div class="flexbox">
-                        <h3 class="tit">회원 정보 입력</h3>
-                        <ol class="step">
+                        <div class="faq_search">
+                            <input type="text" name="hd_sch" id="hd_sch" placeholder="검색어를 입력해주세요">
+                            <label for="hd_sch" class="hidden">검색어입력</label>
+                            <button type="submit"><img src="../resources/kej/ico-hd-sch.png" alt="검색"></button>
+                        </div>
+                        <ul class="faq_tab">
+                            <li class="on">ALL</li>
+                            <li>해외여행</li>
+                            <li>자유여행</li>
+                            <li>항공</li>
+                            <li>호텔</li>
+                            <li>현지투어/입장권</li>
+                            <li>렌터카</li>
+                            <li>예약/결제</li>
+                            <li>기타</li>
+                        </ul>
+                        <ul class="faq_list">
                             <li>
-                                <span class="icon"><img src="../resources/images/kej/step1.png"></span>
-                                <div><span>step 1</span>본인 인증</div>
-                            </li>
-                            <li class="on">
-                                <span class="icon"><img src="../resources/images/kej/step2.png"></span>
-                                <div><span>step 2</span>회원 정보 입력</div>
-                            </li>
-                            <li>
-                                <span class="icon"><img src="../resources/images/kej/step3.png"></span>
-                                <div><span>step 3</span>가입 완료</div>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <div class="joinform">
-                    <div class="flexbox">
-                        <form action="#">
-                            <fieldset>
-                                <legend class="hidden">회원 정보 입력</legend>
-                                <div class="form_content">
-                                    <div class="title">
-                                        <h4>기본회원정보</h4>
-                                        <p><span class="required">*</span> 표시는 필수 입력항목입니다.</p>
-                                    </div>
-                                    <div class="info_cont">
-                                        <div class="row">
-                                            <div class="label_area">
-                                                <label for="mem_nm" class="label_tit">이름 <span class="required">*</span></label>
-                                            </div>
-                                            <div class="input_area">
-                                                <input type="text" placeholder="이름을 입력해주세요" id="mem_nm" required>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="label_area">
-                                                <label for="mem_id" class="label_tit">아이디 <span class="required">*</span></label>
-                                            </div>
-                                            <div class="input_area">
-                                                <input type="text" placeholder="아이디를 입력해주세요" id="mem_id" required>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="label_area">
-                                                <label for="mem_pwd" class="label_tit">비밀번호 <span class="required">*</span></label>
-                                            </div>
-                                            <div class="input_area">
-                                                <input type="password" placeholder="비밀번호를 입력해주세요" id="mem_pwd" required>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="label_area">
-                                                <label for="mem_pwd_confirm" class="label_tit">비밀번호확인 <span class="required">*</span></label>  
-                                            </div>                                  
-                                            <div class="input_area">
-                                                <input type="password" placeholder="비밀번호를 다시 입력해주세요" id="mem_pwd_confirm" required>
-                                            </div>
-                                        </div>
+                                <div class="question">
+                                    <span>Q</span>
+                                    <p>해외여행자 보험이란??</p>
+                                </div>
+                                <div class="answer">
+                                    <div class="text_wrap">
+                                        <span>A</span>
+                                        <p>
+                                            여행도중에 우연히 발생하게 되는 각종 사고 및 질병, 조난 시 구조비용, 휴대품의 도난 손해 등의 보상을 목적으로 하는 보험.
+                                            <br>
+                                            <br>
+                                            해외여행자보험의 실손의료비는 여러 보험사에 중복 계약을 했더라도 중복보상이 안되고 비례보상으로 처리된다.
+                                            <br>
+                                            (단 , 사망보험금은 중복보상 가능)
+                                            <br>
+                                            ( 휴대품 손해, 배상책임도 비례보상으로 처리)
+                                            <br>
+                                            국내에서 상해 및 질병으로 치료 받는경우 발생한 실손의료비에 대해 100% 보상을 받을수 없다. 자기부담금이 설정되어 있어 그만큼의 비용을 제외하고 보상을 받을수 있다.
+                                            <br>
+                                            <br>
+                                            ※자세한 내용은 홈페이지의 보험 약관을 참조하시기 바랍니다.
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="form_content">
-                                    <div class="title">
-                                        <h4>부가입력사항</h4>
-                                        <p>선택 입력항목입니다.</p>
-                                    </div>
-                                    <div class="info_cont">
-                                        <div class="row">
-                                            <div class="label_area">
-                                                <label for="brith" class="label_tit">생년월일</label>
-                                            </div>
-                                            <div class="input_area">
-                                                <div class="col2">
-                                                    <input type="date" id="brith" data-placeholder="날짜 선택">
-                                                </div>
-                                                <div class="col2 rdo_list">
-                                                    <span><input type="radio" name="brith_sm" id="brith_s"><label for="brith_s">양력</label></span>
-                                                    <span><input type="radio" name="brith_sm" id="brith_m"><label for="brith_m">음력</label></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">                                            
-                                            <div class="label_area">
-                                                <p for="gender" class="label_tit">성별</p>
-                                            </div>
-                                            <div class="input_area rdo_list">
-                                                <span><input type="radio" name="gender" id="gender_f"><label for="gender_f">여자</label></span>
-                                                <span><input type="radio" name="gender" id="gender_m"><label for="gender_m">남자</label></span>
-                                                <span><input type="radio" name="gender" id="gender_e"><label for="gender_e">기타</label></span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="label_area">
-                                                <label for="email" class="label_tit">이메일</label>
-                                            </div>
-                                            <div class="input_area">
-                                                <input type="email" placeholder="이메일을 입력해주세요" id="email" autocomplete="on">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="label_area">
-                                                <label for="mobile" class="label_tit">휴대폰번호</label>
-                                            </div>
-                                            <div class="input_area mobile">
-                                                <div class="mobile1 select_area">
-                                                    <select name="" id="mobile">
-                                                        <option value="010">010</option>
-                                                        <option value="011">011</option>
-                                                        <option value="016">016</option>
-                                                        <option value="017">017</option>
-                                                        <option value="018">018</option>
-                                                        <option value="019">019</option>
-                                                    </select>
-                                                </div>
-                                                <div class="mobile2">
-                                                    <input type="tel" placeholder="하이픈(-)을 포함하여 입력해주세요" id="mobile1" pattern="[0-9]{4}-[0-9]{4}" title="0000-0000">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="label_area">
-                                                <p class="label_tit">주소</p> 
-                                            </div>
-                                            <div class="input_area add">
-                                                <div class="add_row">
-                                                    <div class="add1">
-                                                        <input type="text" id="sample6_postcode" placeholder="우편번호">
-                                                    </div>
-                                                    <div class="add2">
-                                                        <button type="button" onclick="sample6_execDaumPostcode()">우편번호찾기</button>
-                                                    </div>
-                                                </div>
-                                                <div class="add_row">
-                                                    <input type="text" id="sample6_address" placeholder="주소">
-                                                </div>
-                                                <div class="add_row">
-                                                    <input type="text" id="sample6_detailAddress" placeholder="상세주소를 입력하세요">
-                                                    <input type="text" id="sample6_extraAddress" placeholder="참고항목" hidden>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="label_area">
-                                                <label for="purpose" class="label_tit">가입목적</label>
-                                            </div>
-                                            <div class="input_area txtarea">
-                                                <textarea name="" id="purpose" cols="30" rows="10" placeholder="가입목적을 입력해주세요"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="label_area">
-                                                <p for="color" class="label_tit">좋아하는 색깔</p>
-                                            </div>
-                                            <div class="input_area">
-                                                <input type="color" id="color" value="#FFDA57">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="label_area">
-                                                <label for="sns" class="label_tit">SNS 주소</label>
-                                            </div>
-                                            <div class="input_area">
-                                                <input type="url" placeholder="SNS URL을 입력해주세요" id="sns">
-                                            </div>
-                                        </div>
-                                        <div class="row full">
-                                            <div class="label_area">
-                                                <p class="label_tit">가고 싶은 여행지</p>
-                                            </div>
-                                            <div class="input_area rdo_list">
-                                                <span><input type="checkbox" name="" id="issue1"><label for="issue1">아시아</label></span>
-                                                <span><input type="checkbox" name="" id="issue2"><label for="issue2">유럽</label></span>
-                                                <span><input type="checkbox" name="" id="issue3"><label for="issue3">북미</label></span>
-                                                <span><input type="checkbox" name="" id="issue4"><label for="issue4">오세아니아</label></span>
-                                                <span><input type="checkbox" name="" id="issue5"><label for="issue5">중남미</label></span>
-                                                <span><input type="checkbox" name="" id="issue6"><label for="issue6">중동/아프리카</label></span>
-                                            </div>
-                                        </div>
+                            </li>
+                            <li>
+                                <div class="question">
+                                    <span>Q</span>
+                                    <p>취소/변경 절차는 어떻게 되나요?</p>
+                                </div>
+                                <div class="answer">
+                                    <div class="text_wrap">
+                                        <span>A</span>
+                                        <p>
+                                            - 입장권/패스 : 경우 마이페이지에서 취소신청을 한 후 실물 티켓, 바우처일 경우 모두투어 본사로 보내주시면 됩니다.
+                                            <br>
+                                            보내주신 물품 수령후 공지된 취소료를 제외하고 고객님의 계좌로 입금해드립니다.
+                                            <br>
+                                            - 현지투어 : 1234-5678로 취소요청 부탁드립니다.
+                                        </p>
                                     </div>
                                 </div>
-                            </fieldset>
-                            <div class="btn_cont">
-                                <button type="submit">회원가입</button><button type="reset">취소</button>
-                            </div>
-                        </form>
+                            </li>
+                            <li>
+                                <div class="question">
+                                    <span>Q</span>
+                                    <p>여행시 여권유효기간은 얼마나 남아있어야 하나요</p>
+                                </div>
+                                <div class="answer">
+                                    <div class="text_wrap">
+                                        <span>A</span>
+                                        <p>
+                                            여권의 유효기간은 출국일로부터 최소 6개월 이상 남아있어야 합니다.
+                                            <br>
+                                            남은 기간이 6개월 미만인 경우 출국이 가능할수도 있으나,
+                                            <br>
+                                            현지 입국심사시 입국 거절사유가 될수 있습니다.
+                                            <br>
+                                            남은 유효기간이 6개월 미만인 경우 여권을 꼭 재발급 받아 주시기 바랍니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="question">
+                                    <span>Q</span>
+                                    <p>호텔비용 외에 현지에서 부과되는 추가 비용이 있나요?</p>
+                                </div>
+                                <div class="answer">
+                                    <div class="text_wrap">
+                                        <span>A</span>
+                                        <p>
+                                            특정 지역 또는 특정호텔에 숙박료외의 (시티텍스, 리조트피 등)의 추가비용이 발생하는 경우가 있습니다. 추가 비용은 공지된 금액과 다르게 예고 없이 변동이 있을 수 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="question">
+                                    <span>Q</span>
+                                    <p>패키지여행으로 예약하고 현지에서 일행끼리 관광이 되나요?</p>
+                                </div>
+                                <div class="answer">
+                                    <div class="text_wrap">
+                                        <span>A</span>
+                                        <p>
+                                            패키지여행은 기본적으로 그룹으로 움직이는 여행패턴으로 보시면 됩니다.
+                                            <br>
+                                            일행이 모두 함께 같은 일정으로 움직이시기 때문에, 원래 해당일정 자체가 자유일정이 하루 또는 반나절 포함되어있는 경우가 아니라면, 일행끼리의 개별행동은 원칙적으로 불가하십니다.
+                                            <br>
+                                            그럴 경우는 패키지상품보다는 에어텔 등의 개별여행패턴으로 예약하시는것을 권장 합니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="question">
+                                    <span>Q</span>
+                                    <p>E-Ticket이란?</p>
+                                </div>
+                                <div class="answer">
+                                    <div class="text_wrap">
+                                        <span>A</span>
+                                        <p>
+                                            기존 종이항공권(Paper Ticket)대신 전자항공권(Electronic Ticket)으로 발급하여
+                                            <br>
+                                            고객님의 모든 여행정보가 항공사의 시스템에 보관/처리되는 서비스입니다.
+                                            <br>
+                                            <br>
+                                            고객님의 티켓정보가 항공사의 시스템에 전자문서로 보관 되므로 분실의 위험이 없으며 원하시는 e-mail 또는 fax로도 받아보실 수 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="question">
+                                    <span>Q</span>
+                                    <p>좌석 배정은 언제 받을 수 있나요?</p>
+                                </div>
+                                <div class="answer">
+                                    <div class="text_wrap">
+                                        <span>A</span>
+                                        <p>
+                                            항공사별로 좌석 배정이 가능한지 여부가 상이하기 때문에 예약 후 담당자에게 확인 해주시기 바라며, 출발 당일 날은 저희 여행사에서 지정해 드릴수가 없습니다.
+                                            <br>
+                                            공항에 여유있게 도착하시어 항공사 직원에게 요청하시면 최대한 고객님의 편의를 고려하여 좌석배정이 되도록 도와드릴 것입니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="question">
+                                    <span>Q</span>
+                                    <p>회원가입을 해야만 여행상품예약이 가능한가요?</p>
+                                </div>
+                                <div class="answer">
+                                    <div class="text_wrap">
+                                        <span>A</span>
+                                        <p>
+                                            아닙니다. 비회원인 일반고객의 경우에도 여행상품을 예약하실 수 있습니다.
+                                            <br>
+                                            예약버튼 클릭후 로그인 페이지가 나오면 일반고객쪽을 체크하시고,
+                                            <br>
+                                            주민번호와 성명을 넣으신다음 나오는 페이지에서 여행자 정보를 입력하시면 됩니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="question">
+                                    <span>Q</span>
+                                    <p>지금 해외 패키지 상품 예약이 가능한가요?</p>
+                                </div>
+                                <div class="answer">
+                                    <div class="text_wrap">
+                                        <span>A</span>
+                                        <p>
+                                            현재 코로나로 인하여 각 국가별 입국 가능 조건이 상이하며,
+                                            <br>
+                                            사전고지 없이 변경될 수 있습니다.
+                                            <br>
+                                            자세한 사항은 당사 홈페이지 내 ‘국가별 입국규정 안내’를 참고 부탁드립니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="question">
+                                    <span>Q</span>
+                                    <p>세 명이 여행할 경우 함께 방을 쓸 수 있나요? 아니면 방을 두개 써야 하나요?</p>
+                                </div>
+                                <div class="answer">
+                                    <div class="text_wrap">
+                                        <span>A</span>
+                                        <p>
+                                            상품가격 형성시 기본조건이 성인 2인1실 기준입니다. 아동을 동반할경우가 아니라면 성인3명의 경우 보통 한분은 싱글룸을 사용하시는것이 좋습니다. 이 경우 추가요금이 발생할 수 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-                    <script>
-                        function sample6_execDaumPostcode() {
-                            new daum.Postcode({
-                                oncomplete: function(data) {
-                                    // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-
-                                    // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-                                    // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-                                    var addr = ''; // 주소 변수
-                                    var extraAddr = ''; // 참고항목 변수
-
-                                    //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-                                    if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-                                        addr = data.roadAddress;
-                                    } else { // 사용자가 지번 주소를 선택했을 경우(J)
-                                        addr = data.jibunAddress;
-                                    }
-
-                                    // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
-                                    if(data.userSelectedType === 'R'){
-                                        // 법정동명이 있을 경우 추가한다. (법정리는 제외)
-                                        // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
-                                        if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
-                                            extraAddr += data.bname;
-                                        }
-                                        // 건물명이 있고, 공동주택일 경우 추가한다.
-                                        if(data.buildingName !== '' && data.apartment === 'Y'){
-                                            extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-                                        }
-                                        // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
-                                        if(extraAddr !== ''){
-                                            extraAddr = ' (' + extraAddr + ')';
-                                        }
-                                        // 조합된 참고항목을 해당 필드에 넣는다.
-                                        document.getElementById("sample6_extraAddress").value = extraAddr;
-                                    
-                                    } else {
-                                        document.getElementById("sample6_extraAddress").value = '';
-                                    }
-
-                                    // 우편번호와 주소 정보를 해당 필드에 넣는다.
-                                    document.getElementById('sample6_postcode').value = data.zonecode;
-                                    document.getElementById("sample6_address").value = addr;
-                                    // 커서를 상세주소 필드로 이동한다.
-                                    document.getElementById("sample6_detailAddress").focus();
-                                }
-                            }).open();
-                        }
-                    </script>
                 </div>
             </div>
-            <!-- join end -->
+            <!-- faq list end -->
         </main>
         <!-- content end -->
         <!-- footer start -->
@@ -325,7 +322,7 @@
             </div>
             <div class="footer_body">
                 <div class="flexbox">
-                    <a href="kej_signup_v2.html" class="ft_logo"><img src="../resources/images/kej/ft_ej_logo.png" alt="EJ TRAVEL TRIP"></a>
+                    <a href="kej_faq.html" class="ft_logo"><img src="../resources/kej/ft_ej_logo.png" alt="EJ TRAVEL TRIP"></a>
                     <div class="info_cont">
                         <div class="licnese_area">
                             <span>EJ TRAVEL TRIP</span>
