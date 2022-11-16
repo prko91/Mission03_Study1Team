@@ -1,0 +1,408 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Single+Day&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "맑은 고딕";
+    font-size: 14px;
+}
+
+
+
+.header{
+    margin: 30px 0px 0px 30px;
+    width: 1600px;
+    height: 300px;
+    background-image: url(../resources/son/macaroons-g73dc71779_1920.jpg);
+    overflow: hidden;
+    float: left;
+}
+
+#logintab{
+    margin-right: 20px;
+}
+
+#logintab > li {
+    float: right;
+    padding: 5px;
+    margin-right: 10px;
+    
+}
+
+
+
+.logo{
+    margin: 20px;
+    
+    height: 160px;
+    width: 240px;
+    border: 1px solid orange;
+    float: left;
+
+    
+}
+
+.logoimg{
+    margin: 0px;
+    padding: 10px 0px 0px 10px;
+    width: 70px;
+    height: 100px;
+    background: lightyellow;
+    float: left;
+}
+
+.logoname{
+    font-family: 'Single Day', cursive;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    height: 50px;
+    background: lightyellow;
+    
+    float: left;
+
+}
+
+.navi > ul> li {
+
+    margin-left: 0px;
+    margin-top: 90px;
+    width: 200px;
+    height: 30px;
+    float: left;
+    border-left: 1px solid white;
+    
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white
+    ;
+    
+    
+}
+
+.navi > ul> li:last-child {
+    border-right:1px solid white; ;
+}
+
+.navi>ul{
+    display: inline;
+}
+
+.navi{
+    margin-top: 20px;
+    margin-left: 15px;
+    float: left;
+    
+    
+}
+
+.menu_box>a{
+    color: white;
+    text-align: center;
+    ;
+
+}
+
+#searchbox{
+    margin-top: 100px;
+    margin-left: 100px;
+    padding: 0px;
+    float: left;
+    width: 400px;
+    height: 50px;
+    background-color: white;
+}
+
+.hbox{
+    width: 200px;
+    float: left;
+    margin: 15px 0 0 20px;
+    color: darkgray;
+}
+
+.searchboximg{
+    margin-top: 100px;
+    float: left;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: white;
+}
+
+
+/* 헤더 종료, 자주묻는 질문 시작 */
+.QnAHeader_top{
+    width: 1600px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+
+.FAQ{
+    width: 1200px;
+    height: 100%;
+    background: skyblue;
+    float: left;
+    
+}
+
+.FAQWORD{
+    float: left;
+    padding: 40px 0 0 70px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.FAQBOX{
+    float: left;
+    width: 600px;
+    height: 60px;
+    /* background-t: lightseagreen; */
+    margin-left: 250px;
+    margin-top: 20px;
+
+    
+}
+
+#inputbox{
+    float: left;
+    width: 500px;
+    height: 30px;
+    background: white;
+    margin-top: 10px ;
+    padding: 10px 0 0 20px;
+}
+
+.icon_box{
+    width: 40px;
+    height: 40px;
+    background: white;
+    margin-top:10px;
+    float: left;  
+}
+.searchimg{
+    width: 40px;
+    height: 40px;
+    float: left;
+    
+}
+
+.cheat{
+    width: 400px;
+    height: 100%;
+    background: lightyellow;
+    float: left;
+}
+
+.cheat >span {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px;
+    padding-top: 10px;
+    padding-left: 100px;
+}
+
+.talkimg{
+    margin-top: 15px;
+    padding-right: 65px ; 
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+
+/*자주 묻는 질문 탑, 자주 묻는 질문 바텀 시작 */
+
+.QnAHeader_bottom{
+    background: lightgray;
+    width: 1500px;
+    height: 50px;
+    margin-left: 30px;
+    padding:20px 100px 0 0 ;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    text-align: right;
+}
+
+.FAQpast{
+    font-size: 20px;
+    background-color: lightgray
+}
+
+.example{
+    margin: 0px 0px 0px 30px;
+    padding-top: 40px;
+    width: 1600px;
+    height: 1000px;
+    background: #EAEAEA;
+    float: left;
+}
+
+details{
+    margin: 5px 0px 0px 300px;
+    width: 1000px;
+    height: 20px;
+    background: wheat;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid black;
+}
+
+details[open] {
+    background: white;
+    height: 100px;
+    margin-left: 300px ;
+    padding-top: 0px;
+    margin-bottom: 7px;
+    
+       padding-bottom: 10px;
+}
+
+details[open] summary {
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    border-bottom: 1px solid black;
+    background: skyblue;
+}
+
+
+
+
+.exapmdetails{
+    margin-top: 20px;
+}
+
+
+.QQ{
+    margin: 20px;
+    
+}
+
+.AA{
+     padding: 20px;
+     height: 30px;
+     width: 20px;
+     float: left;
+     
+    }
+    
+    .downbutton{
+        
+        width: 15px;
+        height: 15px;
+    }
+
+    #AAA{
+        
+        margin-left: 5px;
+    }
+
+    /* 자주묻는 질문 바텀 끝, 기타리스트 시작 */
+    
+    .QnAlist{
+        width: 1100px;
+        height: 20px;
+        background: lightgray;
+        clear: both;
+        margin-left: 30px;
+        padding-left: 500px;
+        border-top: 1px solid darkgrey;
+        border-bottom: 1px solid darkgrey; 
+    }
+
+
+
+    .QnAlist>ul>li{
+        border-left: 1px solid black;
+        margin-left: 15px;
+        padding-left: 15px;
+        float: left;
+        text-align: center;
+    }
+
+    .QnAlist>ul>li:last-child{
+        padding-right: 15px;
+        border-right:1px solid black; ;
+    }
+
+    /* 기타리스트 끝 푸터 시작 */
+    
+    .footer_box{
+        margin-left: 30px;
+        width: 1600px;
+        height: 200px;
+        background: #EAEAEA;
+        color: black;
+        
+    }
+    
+    .down_logo{
+        margin-top: 20px;
+        margin-left: 200px;
+        width: 20%;
+        height: 100%;
+        float: left;
+
+    }
+
+    /* copyright */
+
+    .copyright{
+        margin-top: 20px;
+        padding-left: 150px;
+        padding-right: 150px;
+        width: 20%;
+        height: 80%;
+        float: left;
+        border-left: 2px solid darkgray;
+        border-right: 2px solid darkgray;
+
+
+    }
+    
+    /* SNS */
+    .sns{
+        margin-left: 100px;
+        width: 20%;
+        height: 100%;
+        float: right;
+
+    }
+
+
+
+
+    .instar{
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin-top: 60px;
+        margin-right: 10px;
+    }
+
+    .youtube{
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin-top: 60px;
+        margin-right: 10px;
+      
+    }
+
+    .twitter{
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin-top: 60px;
+
+      
+    }
