@@ -9,17 +9,16 @@
     <script src="../javascript/prefixfree.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
-        //tab - jQuery로 구현
-        $(document).ready(function(){
+        window.onload = function(){
+            //tab - jQuery로 구현
             $(".faq_tab > li").click(function(){
                 if($(this).hasClass("on") == false){
                     $(this).stop().addClass("on");
                     $(this).stop().siblings().removeClass("on");
                 } 
             })
-        })
-        //list - javascript로 구현
-        window.onload = function(){
+
+            // //list - javascript로 구현
             var question = document.getElementsByClassName('question');
             // console.log(question.length)
             for(var i = 0; i < question.length; i++){
@@ -37,7 +36,7 @@
                         e.currentTarget.parentElement.classList.remove('active');
                     }
                 })
-            }   
+            } 
         }
 </script>
 </head>
