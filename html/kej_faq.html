@@ -20,14 +20,9 @@
 
             // //list - javascript로 구현
             var question = document.getElementsByClassName('question');
-            // console.log(question.length)
             for(var i = 0; i < question.length; i++){
                 question[i].addEventListener('click', function(e){
                     var answer = e.currentTarget.parentElement.getElementsByClassName('answer')[0];
-                    // console.log('answer :: ', answer)
-                    // console.log('answer.style.display :: ', answer.style.display)
-                    // console.log('e.currentTarget.parentElement :: ', e.currentTarget.parentElement)
-                    // console.log('answer.style.visibility :: ', answer.style.visibility
                     if(answer.style.visibility !== 'visible'){
                         answer.style.visibility = 'visible'
                         e.currentTarget.parentElement.classList.add('active');
