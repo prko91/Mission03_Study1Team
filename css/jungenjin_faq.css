@@ -83,8 +83,14 @@ span {
    font-weight: bold;
    padding: 0 10px 0 0;
 }
+.m2 {
+   font-weight: 500;
+}
 .A {
    padding: 0 10px 0 24px;
+}
+.Q {
+   color: #ff7b00;
 }
 .QA_box {
    width: 1200px;
