@@ -12,19 +12,7 @@
     <script>
       $(document).ready(function(){
          $('#m_QA  a.m1').click(function () {
-               //서브 메뉴(ul 요소)가 존재하는 a 요소(.m)를 click하면,
-               var test = $(this).next().addBack();
-               //    console.log(this); //a.m
-               //    console.log(test); //0 : a.m, 1 : ul
-               //find() : ul 요소의 하위 요소 중 .m, ul 요소를 선택합니다
-               test.toggleClass('on').end();
-               //    console.log(test.toggleClass('on').end()); //ul
-               test.find('.m1, ul').removeClass('on').end();
-               //    console.log(test.find('.m, ul').removeClass('on').end()); //0 : a.m.on , 1 : ul.on
-               test.parent().siblings();
-               //    console.log(test.parent().siblings()); // 0 : li , 1 : li
-               test.find('.m1, ul').removeClass('on');
-               //    console.log(test.find('.m, ul').removeClass('on')); // 0 : a.m , 1 : ul , 2 : a.m, 3 : ul, 4 : a.m , 5 : ul
+              $(this).next().addBack().toggleClass('on').end().find('.m1, ul').removeClass('on').end().parent().siblings().find('.m1, ul').removeClass('on');
 
                return false;
             });
@@ -32,20 +20,8 @@
 
       $(document).ready(function(){
          $('#m_QA  ul li a.m2').click(function () {
-               //서브 메뉴(ul 요소)가 존재하는 a 요소(.m)를 click하면,
-               var test = $(this).next().addBack();
-               //    console.log(this); //a.m
-               //    console.log(test); //0 : a.m, 1 : ul
-               //find() : ul 요소의 하위 요소 중 .m, ul 요소를 선택합니다
-               test.toggleClass('on').end();
-               //    console.log(test.toggleClass('on').end()); //ul
-               test.find('ul, .m3').removeClass('on').end();
-               //    console.log(test.find('.m, ul').removeClass('on').end()); //0 : a.m.on , 1 : ul.on
-               test.parent().siblings();
-               //    console.log(test.parent().siblings()); // 0 : li , 1 : li
-               test.find('ul, .m3').removeClass('on');
-               //    console.log(test.find('.m, ul').removeClass('on')); // 0 : a.m , 1 : ul , 2 : a.m, 3 : ul, 4 : a.m , 5 : ul
-
+               $(this).next().addBack().toggleClass('on').end().find('ul, .m3').removeClass('on').end().parent().siblings().find('ul, .m3').removeClass('on');
+               
                return false;
             });
       });
@@ -99,70 +75,70 @@
                   <ul id="m_QA">
                      <li><a href="#" class="m1">구독 서비스 배송 관련 질문</a>
                         <ul>
-                           <li><a href="#" class="m2">Q 배송은 얼마나 걸리나요?</a>
+                           <li><a href="#" class="m2"><span class="Q">Q</span> 배송은 얼마나 걸리나요?</a>
                               <ul>
-                                 <p><a href="#" class="m3">A 일주일 정도 걸립니다</a></p>
+                                 <p><a href="#" class="m3"><span class="A">A</span> 일주일 정도 걸립니다</a></p>
                               </ul>
                            </li>
-                           <li><a href="#" class="m2">Q 누락이 된다면 어떻게 해야하나요?</a>
+                           <li><a href="#" class="m2"><span class="Q">Q</span> 누락이 된다면 어떻게 해야하나요?</a>
                               <ul>
-                                 <p><a href="#" class="m3">A 고객센터로 문의 바랍니다.</a></p>
+                                 <p><a href="#" class="m3"><span class="A">A</span> 고객센터로 문의 바랍니다.</a></p>
                               </ul>
                            </li>
                         </ul>
                      </li>
                      <li><a href="#" class="m1">이벤트 관련 질문</a>
                         <ul>
-                           <li><a href="#" class="m2">Q 이벤트 당첨자는 언제 발표되나요?</a>
+                           <li><a href="#" class="m2"><span class="Q">Q</span> 이벤트 당첨자는 언제 발표되나요?</a>
                               <ul>
-                                 <p><a href="#" class="m3">A 일주일 정도 걸립니다</a></p>
+                                 <p><a href="#" class="m3"><span class="A">A</span> 일주일 정도 걸립니다</a></p>
                               </ul>
                            </li>
-                           <li><a href="#" class="m2">Q 다음 이벤트는 언제인가요?</a>
+                           <li><a href="#" class="m2"><span class="Q">Q</span> 다음 이벤트는 언제인가요?</a>
                               <ul>
-                                 <p><a href="#" class="m3">A 확정된 것은 없으나 만월당 SNS에 이주일 전부터 공지하고 있습니다.</a></p>
+                                 <p><a href="#" class="m3"><span class="A">A</span> 확정된 것은 없으나 만월당 SNS에 이주일 전부터 공지하고 있습니다.</a></p>
                               </ul>
                            </li>
                         </ul>
                      </li>
                      <li><a href="#" class="m1">상생 문의 질문</a>
                         <ul>
-                           <li><a href="#" class="m2">Q 상생 문의 확정은 언제 알 수 있나요?</a>
+                           <li><a href="#" class="m2"><span class="Q">Q</span> 상생 문의 확정은 언제 알 수 있나요?</a>
                               <ul>
-                                 <p><a href="#" class="m3">A 일주일 정도 걸립니다</a></p>
+                                 <p><a href="#" class="m3"><span class="A">A</span> 일주일 정도 걸립니다</a></p>
                               </ul>
                            </li>
-                           <li><a href="#" class="m2">Q 제빵 관련 식재료만 상생 문의를 할 수 있나요?</a>
+                           <li><a href="#" class="m2"><span class="Q">Q</span> 제빵 관련 식재료만 상생 문의를 할 수 있나요?</a>
                               <ul>
-                                 <p><a href="#" class="m3">A 어떤 방식으로든 협업이 가능하다면 문의 가능합니다.</a></p>
+                                 <p><a href="#" class="m3"><span class="A">A</span> 어떤 방식으로든 협업이 가능하다면 문의 가능합니다.</a></p>
                               </ul>
                            </li>
                         </ul>
                      </li>
                      <li><a href="#" class="m1">채용관련 질문</a>
                         <ul>
-                           <li><a href="#" class="m2">Q 합격자 발표는 언제 나오나요?</a>
+                           <li><a href="#" class="m2"><span class="Q">Q</span> 합격자 발표는 언제 나오나요?</a>
                               <ul>
-                                 <p><a href="#" class="m3">A 8월 22일 발표입니다.</a></p>
+                                 <p><a href="#" class="m3"><span class="A">A</span> 8월 22일 발표입니다.</a></p>
                               </ul>
                            </li>
-                           <li><a href="#" class="m2">Q 제빵기사의 합격자 발표는 언제인가요?</a>
+                           <li><a href="#" class="m2"><span class="Q">Q</span> 제빵기사의 합격자 발표는 언제인가요?</a>
                               <ul>
-                                 <p><a href="#" class="m3">A 8월 30일 발표입니다.</a></p>
+                                 <p><a href="#" class="m3"><span class="A">A</span> 8월 30일 발표입니다.</a></p>
                               </ul>
                            </li>
                         </ul>
                      </li>
                      <li><a href="#" class="m1">가맹점 문의 질문</a>
                         <ul>
-                           <li><a href="#" class="m2">Q 가맹점 문의 확정은 언제 되나요?</a>
+                           <li><a href="#" class="m2"><span class="Q">Q</span> 가맹점 문의 확정은 언제 되나요?</a>
                               <ul>
-                                 <p><a href="#" class="m3">A 서류 제출 후 한달 정도 소요됩니다.</a></p>
+                                 <p><a href="#" class="m3"><span class="A">A</span> 서류 제출 후 한달 정도 소요됩니다.</a></p>
                               </ul>
                            </li>
-                           <li><a href="#" class="m2">Q 직영점은 언제 확정이 되나요?</a>
+                           <li><a href="#" class="m2"><span class="Q">Q</span> 직영점은 언제 확정이 되나요?</a>
                               <ul>
-                                 <p><a href="#" class="m3">A 서류 제출 후 두달 정도 소요됩니다.</a></p>
+                                 <p><a href="#" class="m3"><span class="A">A</span> 서류 제출 후 두달 정도 소요됩니다.</a></p>
                               </ul>
                            </li>
                         </ul>

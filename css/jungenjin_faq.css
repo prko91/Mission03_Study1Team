@@ -79,6 +79,13 @@ nav ul li a:hover {
    margin: 100px 0 100px 0;
    color: #161a1d;
 }
+span {
+   font-weight: bold;
+   padding: 0 10px 0 0;
+}
+.A {
+   padding: 0 10px 0 24px;
+}
 .QA_box {
    width: 1200px;
    height: 696px;
